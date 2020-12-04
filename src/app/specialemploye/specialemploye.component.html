@@ -2,4 +2,4 @@
 <button (click)="lister('Directeur')">Les directeurs</button>
 <button (click)="lister('Ingénieur')">Les ingénieurs</button>
 <h3 *ngIf="poste!=''">Liste des employés au poste " {{poste}} "</h3>
-{{employes |json}}
+{{employes.nom}}

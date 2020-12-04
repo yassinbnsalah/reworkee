@@ -18,6 +18,7 @@ lister(poste :string)
    return this.employes ;
 }
   ngOnInit(): void {
+    this.employes = this.employeService.getEmployes();
   }
 
 }
