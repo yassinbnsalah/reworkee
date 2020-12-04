@@ -1,0 +1,17 @@
+<div class="card c1">
+    <div class="card-header c2"> 
+         {{mat.libelle|uppercase}}
+    </div>
+    <img class="card-img-top" src="{{mat.photo}}" alt="">
+    <div class="card-body">
+        <p class="card-text">
+            <span class="badge-pill" [ngClass]="{'badge-primary fa fa-thumbs-up ':mat.hautGamme==true,
+                                        'badge-dark' : mat.hautGamme==false}">
+                price :{{mat.prix}}
+            </span>
+        </p>
+    </div>
+    <div class="card-footer c1 c2 ">
+        <button class="btn btn-primary"> details</button> 
+      
+    </div>
