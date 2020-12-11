@@ -10,7 +10,7 @@ import { MaterielService } from 'src/app/srevices/materiel.service';
 export class DetailmaterielComponent implements OnInit {
   
     identifiant :string ="" ; 
-    det:Materiel[] ; 
+ 
    
    // showing:boolean = true; 
     constructor(private materielServices : MaterielService) { }
@@ -26,8 +26,14 @@ export class DetailmaterielComponent implements OnInit {
       return this.det ; 
 
     }
+    showing:boolean = true; 
+    onshow()
+  {
+    this.showing = !this.showing; 
+  }   
+  det:Materiel ; 
   ngOnInit(): void {
-    this.det = this.materielServices.getMateriels() ; 
+    this.det = this.materielServices.getMaterielById('2') ; 
   }
 
 }

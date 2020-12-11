@@ -4,11 +4,11 @@
     <div class="row">
 
         <ng-container  *ngFor="let t of materiel">
-     <div *ngIf="t.quantite >0"> 
-            <div  class="col">
-                <yes-matriel [mat]="t" ></yes-matriel>
+            <div *ngIf="t.quantite >0"> 
+                <div  class="col">
+                  <yes-matriel [mat]="t" ></yes-matriel>
+              </div>
             </div>
-        </div>
             </ng-container>
             </div>
             </div>

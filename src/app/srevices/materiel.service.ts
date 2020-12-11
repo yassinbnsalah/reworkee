@@ -72,7 +72,7 @@ getMateriels()
 }
 getMaterielById(id:string)
 {
-  return this.materiels.filter(mat => mat.id==id);
+  return <Materiel>this.materiels.find(mat => mat.id==id);
 }
   constructor() { }
 }
