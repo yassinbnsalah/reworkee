@@ -1,5 +1,3 @@
-<button class="btn btn-primary"> Detail</button>
-
 <h1 class="c1"> Detail de {{det.libelle}} {{det.id}}</h1>
 <ul class="list-group"> 
    <div class="container">
@@ -11,12 +9,11 @@
                 <li class="list-group-item"> description {{det.description}}</li>
                 <li class="list-group-item"> quantite {{det.quantite}}</li>
                 <li class="list-group-item"> <input type="checkbox" [checked] ="det.hautGamme"> hout de gamme </li>
-                <!-- <li class="list-group-item"> {{det.commentaires.note}} </li>-->
-                <button class="btn btn-primary" (click)="onshow()"> afficher les commentaires</button>   
+                <button class="btn btn-primary" (click)="onshow()"> afficher les commentaires</button> 
+                <button class="btn btn-primary" (click)="onRetour()">retour</button>
             </div>  
      
             <div *ngIf="!showing">
-          
                 <h3> liste des commentaires </h3>
                     <ng-container *ngFor="let c of det.commentaires ; index as i ">
                          <div class="alert alert-primary" role="alert"> commentaire n° {{i+1}}</div>

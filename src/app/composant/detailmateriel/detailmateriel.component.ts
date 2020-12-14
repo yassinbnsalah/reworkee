@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Materiel } from 'src/app/model/materiel';
 import { MaterielService } from 'src/app/srevices/materiel.service';
 
@@ -10,30 +11,23 @@ import { MaterielService } from 'src/app/srevices/materiel.service';
 export class DetailmaterielComponent implements OnInit {
   
     identifiant :string ="" ; 
- 
-   
-   // showing:boolean = true; 
-    constructor(private materielServices : MaterielService) { }
-  /* onshow()
-    {
-      this.showing = !this.showing; 
-    }*/
-    onAfficher(id:string)
-    {
-      this.identifiant = id ; 
-      this.det = this.materielServices.getMaterielById(id) ; 
-      alert(this.det); 
-      return this.det ; 
-
-    }
+    constructor(private router:Router,private activatedRoute:ActivatedRoute,private materielServices : MaterielService) { }
+  
+    
     showing:boolean = true; 
     onshow()
   {
     this.showing = !this.showing; 
-  }   
+  }  
+  onRetour()
+  {
+  this.router.navigate(['/informatique']);
+  } 
   det:Materiel ; 
   ngOnInit(): void {
-    this.det = this.materielServices.getMaterielById('2') ; 
+   // 
+   this.identifiant = this.activatedRoute.snapshot.params['id'];
+   this.det = this.materielServices.getMaterielById(this.identifiant); 
   }
 
 }

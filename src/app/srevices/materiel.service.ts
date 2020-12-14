@@ -5,7 +5,7 @@ import { Materiel } from '../model/materiel';
   providedIn: 'root'
 })
 export class MaterielService {
-  materiels :Materiel[]=[
+  private materiels :Materiel[]=[
     {   
         id: '1',
         libelle: 'Ecran',
@@ -27,7 +27,7 @@ export class MaterielService {
         description: 'PC Portable très pratique', 
         hautGamme: false,
         quantite: 5,
-        commentaires:[ {contenu:' satisfaisant', note:3, auteur:'Sami MRAD', date:new Date(2020,11,4)},
+        commentaires:[ {contenu:' satisfaisant', note:3, auteur:'Saaami MRAD', date:new Date(2020,11,4)},
         {contenu:'Bon rapport qualité prix', note:4, auteur:'Samar Salah', date:new Date(2020,10,4)}]
     },
     {   

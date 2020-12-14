@@ -6,12 +6,11 @@
     <div class="card-body">
         <p class="card-text">
             <span class="badge-pill" [ngClass]="{'badge-primary fa fa-thumbs-up ':mat.hautGamme==true,
-                                        'badge-dark' : mat.hautGamme==false}">
-                price :{{mat.prix}}
+                                                 'badge-dark' : mat.hautGamme==false}">
+                    price :{{mat.prix}}
             </span>
         </p>
     </div>
     <div class="card-footer c1 c2 ">
-        <button class="btn btn-primary"> details</button> 
-      
+        <button class="btn btn-primary" [routerLink]="['/informatique', mat.id]" > details</button> 
     </div>

@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeemployeComponent } from './listeemploye/listeemploye.component';
 import { SpecialemployeComponent } from './specialemploye/specialemploye.component';
@@ -10,6 +8,10 @@ import { ListematrielComponent } from './composant/listematriel/listematriel.com
 import { MatrielComponent } from './composant/matriel/matriel.component';
 import { DetailmaterielComponent } from './composant/detailmateriel/detailmateriel.component';
 import { CommentaireComponent } from './composant/commentaire/commentaire.component';
+import { ContactComponent } from './composant/contact/contact.component';
+import { EurreurComponent } from './composant/eurreur/eurreur.component';
+import { MenuComponent } from './composant/menu/menu.component';
+import { AppRoutingModule } from './app-routing-routing.module';
 
 
 @NgModule({
@@ -21,7 +23,10 @@ import { CommentaireComponent } from './composant/commentaire/commentaire.compon
     ListematrielComponent,
     MatrielComponent,
     DetailmaterielComponent,
-    CommentaireComponent
+    CommentaireComponent,
+    ContactComponent,
+    EurreurComponent,
+    MenuComponent
   
   ],
   imports: [
